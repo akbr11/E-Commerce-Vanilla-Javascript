@@ -1,0 +1,329 @@
+.navbar {
+    background-color: orange;
+}
+
+.navbar-brand span {
+    font-weight: bolder;
+    color: white;
+}
+
+.navbar-nav li a {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table-image thead td th {
+    border: 0;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.table-image td th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-image .qty {
+    max-width: 30%;
+}
+
+.price {
+    margin-left: 1rem;
+}
+
+
+
+#page1 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url("/assets/image/bg0.jpg");
+    background-position: center;
+    background-size: cover;
+    padding-top: 20%;
+}
+
+.title {
+    font-weight: bolder;
+}
+
+.teks {
+    color: #fff !important;
+}
+
+
+/* modal show product details */
+.detail-price {
+    color: #fb3531;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.input-qty {
+    border: 1px solid orange;
+    height: 33px;
+    text-align: center;
+    width: 50px;
+    border-radius: 5px;
+}
+
+/* end modal show product details */
+
+
+.hidden {
+    display: none;
+}
+
+.title1 {
+    color: orange;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+#page2 {
+    background-color: orange;
+    background-size: cover;
+}
+
+
+h5 {
+    text-transform: uppercase;
+}
+
+
+.card .cards {
+    border: none;
+    /* outline: none; */
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform .3s;
+}
+
+.cards:hover {
+    transform: translateY(-15px);
+    transition: transform .3s;
+}
+
+.product-hover {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation-name: show_top;
+    animation-duration: 1s;
+}
+
+@keyframes show_top {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.product-image:hover .product-hover {
+    display: flex;
+    top: -50px;
+    flex-direction: column;
+}
+
+.text1 {
+    font-size: 13px;
+    color: #cbcbcb;
+}
+
+.info {
+    line-height: 17px;
+}
+
+.star {
+    color: #fbc02d
+}
+
+.title3 {
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    position: relative;
+    margin: 30px 0 60px;
+}
+
+.title3::after {
+    content: "";
+    width: 140px;
+    position: absolute;
+    margin: 0 auto;
+    height: 3px;
+    background: #db584e;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    opacity: .8;
+}
+
+.col-center {
+    margin: 0 auto;
+    float: none !important;
+}
+
+.carousel {
+    margin: 50px auto;
+    padding: 0 70px;
+}
+
+.carousel-item {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 290px;
+}
+
+.carousel .item .img-box {
+    width: 135px;
+    height: 135px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.carousel .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+.carousel .testimonial {
+    padding: 30px 0 10px;
+}
+
+.carousel .overview {
+    font-style: italic;
+}
+
+.carousel .overview b {
+    text-transform: uppercase;
+    color: #db584e;
+}
+
+.carousel .carousel-control {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+    background: none;
+}
+
+.carousel-control i {
+    font-size: 68px;
+    line-height: 42px;
+    position: absolute;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+
+.carousel .carousel-indicators {
+    bottom: -40px;
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 1px 3px;
+    border-radius: 50%;
+}
+
+.carousel-indicators li {
+    background: #999;
+    border-color: transparent;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators li.active {
+    background: #555;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.cost .price-product {
+    color: #fb3531;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.shoe {
+    background: #dc3545;
+}
+
+.shoe:hover {
+    opacity: .8;
+}
+
+footer {
+    background-color: orange;
+}
+
+.minus .plus {
+    color: black;
+}
+
+
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 700px) {
+    table#cart tbody td .form-control {
+        width: 20%;
+        display: inline !important;
+    }
+
+    .actions .btn {
+        width: 36%;
+        margin: 1.5em 0;
+    }
+
+    .actions .btn-info {
+        float: left;
+    }
+
+    .actions .btn-danger {
+        float: right;
+    }
+
+    table#cart thead {
+        display: none;
+    }
+
+    table#cart tbody td {
+        display: block;
+        padding: .6rem;
+        min-width: 320px;
+    }
+
+    table#cart tbody tr td:first-child {
+        /* background: #333; */
+        color: #333;
+    }
+
+    table#cart tbody td:before {
+        content: attr(data-th);
+        font-weight: bold;
+        display: inline-block;
+        width: 8rem;
+    }
+
+    table#cart tfoot td {
+        display: block;
+    }
+}

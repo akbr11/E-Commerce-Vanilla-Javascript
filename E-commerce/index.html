@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>E-Commerce</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section id="bar">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container">
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list" style="width: 50px; color: white"></i>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span>LOGO SHOP</span>
+                </a>
+                <ul class="navbar-nav ml-auto d-md-block d-lg-none">
+                    <li class="nav-item">
+                        <button class="btn" type="button" data-toggle="modal" data-target="#cartModal" id="btnModal"
+                            style="color: white">
+                            <i class="bi-cart-fill"></i>
+                            <!-- <span class="number"></span> -->
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav mx-auto text-white">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="/page/about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+                              shop
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <a class="dropdown-item" href="#lateProduct">Latest Product</a>
+                              <a class="dropdown-item" href="#fProduct">Featured Product</a>
+                            </div>
+                          </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <form class="form-inline">
+                                <div class="pl-2 p-1 bg-light rounded-pill">
+                                    <div class="input-group">
+                                        <input type="search" placeholder="What're you searching for?"
+                                            class="form-control border-0 bg-light">
+                                        <div class="input-group-append">
+                                            <button type="submit" class="btn btn-link" style="color: orange;">
+                                                <i class="bi bi-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <button class="btn" type="button" data-toggle="modal" data-target="#cartModal" id="btnModal"
+                                style="color: white">
+                                <i class="bi-cart-fill"></i>
+                                <span class="number"></span>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn">
+                                <i class="bi bi-person-fill" style="color: white"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document" id="modal">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                        <h5 class="modal-title">Cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="close">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="container">
+                            <table id="cart" class="table table-hover table-condensed">
+                                <thead class="text-center">
+                                    <th style="width:30%">Product</th>
+                                    <th style="width:10%">Price</th>
+                                    <th style="width:8%">Quantity</th>
+                                    <th style="width:8%">Size</th>
+                                    <th style="width:20%"  class="text-center">Subtotal</th>
+                                </thead>
+                                <tbody class="show-product"></tbody>
+                                <tr class="checkout hidden">
+                                    <td colspan="4"></td>
+                                    <td>
+                                        <button class="btn btn-success check">
+                                            Checkout
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Navbar -->
+
+    <!-- Section Image page -->
+    <section id="page1">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-6 text-center pt-3 py-5 teks">
+                    <h4 class="title">Hello</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula nulla tortor, viverra
+                        sodales purus maximus at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                        posuere cubilia curae. </p>
+                    <button class="btn rounded-pill" style="background-color: orange;">
+                        <a href="#" class="text-center font-weight-bold text-uppercase" style="color: white;">click
+                            here</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Section Image Page -->
+
+    <!-- Section Featured Product -->
+    <section id="fProduct">
+        <div class="container pt-3 pb-5">
+            <div class="text-center">
+                <h2 class="title1">FEATURED PRODUCTS</h2>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 125px; height: 2px; background-color: orange;">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="card cards pt-1 product-list">
+                        <div class="product-1 p-2 text-center">
+                            <figure class="product-image">
+                                <img src="/assets/image/basic-v-neck-folded-t-shirt-mockup-03.jpg"
+                                    class="rounded img-thumbnail product-img" alt="...">
+                                <div class="product-hover">
+                                    <button class="btn btn-warning text-light addCart" data-id="1">
+                                        <i class="bi bi-cart-plus"></i>
+                                        <span class="text-uppercase">add to cart</span>
+                                    </button>
+                                    <button class="btn btn-info option-product mt-3" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        <span class="text-uppercase">view details</span>
+                                    </button>
+                                </div>
+                            </figure>
+                            <h5 class="title-product">art 1</h5>
+                            <div class="mt-1 info">
+                                <span class="text1 d-block">Lorem ipsum dolor sit amet</span>
+                                <span class="text1">Lorem ipsum</span>
+                            </div>
+                            <div class="cost mt-1 text-dark">
+                                <div class="star mt-3 align-items-center">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="price-product">
+                                    Rp.<span class="price">110000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card cards pt-1 product-list">
+                        <div class="product-1 p-2 text-center">
+                            <figure class="product-image">
+                                <img src="/assets/image/mens-dryblend-adult-t-shirt-mockup-01.jpg"
+                                    class="rounded img-thumbnail product-img" alt="...">
+                                <div class="product-hover">
+                                    <button class="btn btn-warning text-light addCart" data-id="2">
+                                        <i class="bi bi-cart-plus"></i>
+                                        <span class="text-uppercase">add to cart</span>
+                                    </button>
+                                    <button class="btn btn-info option-product mt-3" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        <span class="text-uppercase">view details</span>
+                                    </button>
+                                </div>
+                            </figure>
+                            <h5 class="title-product">art 2</h5>
+                            <div class="mt-1 info">
+                                <span class="text1 d-block">Lorem ipsum dolor sit amet</span>
+                                <span class="text1">Lorem ipsum</span>
+                            </div>
+                            <div class="cost mt-1 text-dark">
+                                <div class="star mt-3 align-items-center">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="price-product">
+                                    Rp.<span class="price">130000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card cards pt-1 product-list">
+                        <div class="product-1 p-2 text-center">
+                            <figure class="product-image">
+                                <img src="/assets/image/apparel-princess-tee-back-mockup-05.jpg"
+                                    class="rounded img-thumbnail product-img" alt="...">
+                                <div class="product-hover">
+                                    <button class="btn btn-warning text-light addCart" data-id="3">
+                                        <i class="bi bi-cart-plus"></i>
+                                        <span class="text-uppercase">add to cart</span>
+                                    </button>
+                                    <button class="btn btn-info option-product mt-3" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        <span class="text-uppercase">view details</span>
+                                    </button>
+                                </div>
+                            </figure>
+                            <h5 class="title-product">art 3</h5>
+                            <div class="mt-1 info">
+                                <span class="text1 d-block">Lorem ipsum dolor sit amet</span>
+                                <span class="text1">Lorem ipsum</span>
+                            </div>
+                            <div class="cost mt-1 text-dark">
+                                <div class="star mt-3 align-items-center">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="price-product">
+                                    Rp.<span class="price">110000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card cards pt-1 product-list">
+                        <div class="product-1 p-2 text-center">
+                            <figure class="product-image">
+                                <img src="/assets/image/130.jpg"
+                                    class="rounded img-thumbnail product-img" alt="...">
+                                <div class="product-hover">
+                                    <button class="btn btn-warning text-light addCart" data-id="4">
+                                        <i class="bi bi-cart-plus"></i>
+                                        <span class="text-uppercase">add to cart</span>
+                                    </button>
+                                    <button class="btn btn-info option-product mt-3" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        <span class="text-uppercase">view details</span>
+                                    </button>
+                                </div>
+                            </figure>
+                            <h5 class="title-product">art 4</h5>
+                            <div class="mt-1 info">
+                                <span class="text1 d-block">Lorem ipsum dolor sit amet</span>
+                                <span class="text1">Lorem ipsum</span>
+                            </div>
+                            <div class="cost mt-1 text-dark">
+                                <div class="star mt-3 align-items-center">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="price-product">
+                                    Rp.<span class="price">120000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-product list-product">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">detail product</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="" class="modal-img w-100" alt="" srcset="">
+                                        </div>
+                                        <div class="col-md-7 mr-auto">
+                                            <h2 class="text-uppercase detail-title"></h2>
+                                            <p class="">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula
+                                                nulla tortor, viverra sodales purus maximus at. Vestibulum ante ipsum
+                                                primis in faucibus orci luctus et ultricesposuere cubilia curae.
+                                            </p>
+                                            <p class="detail-price"></p>
+                                            <p>Condition : <b>New</b></p>
+                                            <p>Availability : <b>Ready In Stock</b></p>
+                                            <label for="">Ready Size :</label><br>
+                                            <div class="choice-btn d-flex">
+                                                <div class="font-weight-bold text-center rounded p-1" style="width: 25px;">
+                                                    <span class="text-uppercase text-dark">s</span>
+                                                </div>
+                                                <div class="font-weight-bold text-center rounded p-1" style="width: 25px;">
+                                                    <span class="text-uppercase text-dark">m</span>
+                                                </div>
+                                                <div class="font-weight-bold text-center rounded p-1" style="width: 25px;">
+                                                    <span class="text-uppercase text-dark">l</span>
+                                                </div>
+                                                <div class="font-weight-bold text-center rounded p-1" style="width: 25px;">
+                                                    <span class="text-uppercase text-dark">xl</span>
+                                                </div>
+                                                <div class="font-weight-bold text-center rounded p-1" style="width: 25px;">
+                                                    <span class="text-uppercase text-dark">xxl</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Section Featured Product -->
+
+    <!-- section Background -->
+    <section id="page2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4 text-left pt-3 py-5 teks">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula nulla tortor, viverra
+                        sodales purus maximus at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                        posuere cubilia curae. </p>
+                </div>
+                <div class="col-md-3 text-left pt-3 py-5 teks">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula nulla tortor, viverra
+                        sodales purus maximus at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                        posuere cubilia curae. </p>
+                </div>
+                <div class="col-md-4 text-left pt-3 py-5 teks">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula nulla tortor, viverra
+                        sodales purus maximus at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                        posuere cubilia curae. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Section Background -->
+
+    <!-- Section Latest Product -->
+    <section id="lateProduct" class="bg-light">
+        <div class="container pt-3 pb-5">
+            <div class="text-center">
+                <h2 class="title1">LATEST PRODUCTS</h2>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 125px; height: 2px; background-color: orange;">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="card cards pt-1 product-list">
+                        <div class="product-1 p-2 text-center">
+                            <figure class="product-image">
+                                <img src="/assets/image/basic-v-neck-folded-t-shirt-mockup-03.jpg"
+                                    class="rounded img-thumbnail product-img" alt="...">
+                                <div class="product-hover">
+                                    <button class="btn btn-warning text-light addCart" data-id="5">
+                                        <i class="bi bi-cart-plus"></i>
+                                        <span class="text-uppercase">add to cart</span>
+                                    </button>
+                                    <button class="btn btn-info option-product mt-3" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        <span class="text-uppercase">view details</span>
+                                    </button>
+                                </div>
+                            </figure>
+                            <h5 class="title-product">art 1</h5>
+                            <div class="mt-1 info">
+                                <span class="text1 d-block">Lorem ipsum dolor sit amet</span>
+                                <span class="text1">Lorem ipsum</span>
+                            </div>
+                            <div class="cost mt-1 text-dark">
+                                <div class="star mt-3 align-items-center">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="price-product">
+                                    Rp.<span class="price">110000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card cards pt-1 product-list">
+                        <div class="product-1 p-2 text-center">
+                            <figure class="product-image">
+                                <img src="/assets/image/basic-v-neck-folded-t-shirt-mockup-03.jpg"
+                                    class="rounded img-thumbnail product-img" alt="...">
+                                <div class="product-hover">
+                                    <button class="btn btn-warning text-light addCart" data-id="6">
+                                        <i class="bi bi-cart-plus"></i>
+                                        <span class="text-uppercase">add to cart</span>
+                                    </button>
+                                    <button class="btn btn-info option-product mt-3" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        <span class="text-uppercase">view details</span>
+                                    </button>
+                                </div>
+                            </figure>
+                            <h5 class="title-product">art 1</h5>
+                            <div class="mt-1 info">
+                                <span class="text1 d-block">Lorem ipsum dolor sit amet</span>
+                                <span class="text1">Lorem ipsum</span>
+                            </div>
+                            <div class="cost mt-1 text-dark">
+                                <div class="star mt-3 align-items-center">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="price-product">
+                                    Rp.<span class="price">110000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card cards pt-1 product-list">
+                        <div class="product-1 p-2 text-center">
+                            <figure class="product-image">
+                                <img src="/assets/image/basic-v-neck-folded-t-shirt-mockup-03.jpg"
+                                    class="rounded img-thumbnail product-img" alt="...">
+                                <div class="product-hover">
+                                    <button class="btn btn-warning text-light addCart" data-id="7">
+                                        <i class="bi bi-cart-plus"></i>
+                                        <span class="text-uppercase">add to cart</span>
+                                    </button>
+                                    <button class="btn btn-info option-product mt-3" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        <span class="text-uppercase">view details</span>
+                                    </button>
+                                </div>
+                            </figure>
+                            <h5 class="title-product">art 1</h5>
+                            <div class="mt-1 info">
+                                <span class="text1 d-block">Lorem ipsum dolor sit amet</span>
+                                <span class="text1">Lorem ipsum</span>
+                            </div>
+                            <div class="cost mt-1 text-dark">
+                                <div class="star mt-3 align-items-center">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="price-product">
+                                    Rp.<span class="price">110000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card cards pt-1 product-list">
+                        <div class="product-1 p-2 text-center">
+                            <figure class="product-image">
+                                <img src="/assets/image/basic-v-neck-folded-t-shirt-mockup-03.jpg"
+                                    class="rounded img-thumbnail product-img" alt="...">
+                                <div class="product-hover">
+                                    <button class="btn btn-warning text-light addCart" data-id="8">
+                                        <i class="bi bi-cart-plus"></i>
+                                        <span class="text-uppercase">add to cart</span>
+                                    </button>
+                                    <button class="btn btn-info option-product mt-3" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        <span class="text-uppercase">view details</span>
+                                    </button>
+                                </div>
+                            </figure>
+                            <h5 class="title-product">art 1</h5>
+                            <div class="mt-1 info">
+                                <span class="text1 d-block">Lorem ipsum dolor sit amet</span>
+                                <span class="text1">Lorem ipsum</span>
+                            </div>
+                            <div class="cost mt-1 text-dark">
+                                <div class="star mt-3 align-items-center">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="price-product">
+                                    Rp.<span class="price">110000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3 mb-0">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link">
+                                <i class="bi bi-arrow-left-circle-fill"></i>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- end Section Latest Product -->
+
+    <!-- review Consument -->
+    <section id="review" class="bg-light">
+        <div class="container pt-1">
+            <div class="row">
+                <div class="col-md-8 col-center m-auto">
+                    <div class="title3">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel -->
+                        <div class="carousel-inner">
+                            <div class="item carousel-item active">
+                                <div class="img-box"><img src="https://i.ibb.co/d5DY64w/img1.jpg" alt=""></div>
+                                <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
+                                    sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel,
+                                    semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius
+                                    nibh non aliquet.</p>
+                                <p class="overview"><b>Jennifer Smith</b>, Office Worker</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="img-box"><img src="https://i.ibb.co/5FF1vqz/img2.jpg" alt=""></div>
+                                <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque
+                                    eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra
+                                    sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh,
+                                    facilisis gravida odio.</p>
+                                <p class="overview"><b>Dauglas McNun</b>, Financial Advisor</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="img-box"><img src="https://i.ibb.co/Trv7hDv/img3.jpg" alt=""></div>
+                                <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id
+                                    lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan
+                                    tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa.
+                                    Etiam hendrerit dolor eget rutrum.</p>
+                                <p class="overview"><b>Hellen Wright</b>, Athelete</p>
+                            </div>
+                        </div>
+                        <!-- Carousel Controls -->
+                        <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end review Consument -->
+
+    <!-- Section Footer -->
+    <footer class="page-footer">
+        <div class="container text-white text-center text-md-left mt-5 pt-5">
+            <div class="row">
+                <div class="col-md-3 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">name shop</h6>
+                    <hr class="bg-white mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px;">
+                    <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis tristique
+                        ante et
+                        laoreet.</p>
+                    <div class="cost mt-3 ">
+                        <div class="mt-3 align-items-center">
+                            <button class="btn">
+                                <i class="bi bi-facebook" style="color: white;"></i>
+                            </button>
+                            <button class="btn">
+                                <i class="bi bi-instagram" style="color: white;"></i>
+                            </button>
+                            <button class="btn">
+                                <i class="bi bi-twitter" style="color: white;"></i>
+                            </button>
+                            <button class="btn">
+                                <i class="bi bi-linkedin" style="color: white;"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">contact info</h6>
+                    <hr class="bg-white mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px;">
+                    <ul class="list-unstyled">
+                        <li class="my-2">
+                            <a href="#" class=" text-white">
+                                <i class="bi bi-telephone-forward-fill"></i> +62 81294284
+                            </a>
+                        </li>
+                        <li class="my-2 pt-2">
+                            <a href="#" class=" text-white">
+                                <i class="bi bi-telephone-forward-fill"></i> +1232 21321
+                            </a>
+                        </li>
+                        <li class="my-2 pt-2">
+                            <a href="#" class=" text-white">
+                                <i class="bi bi-envelope-fill"></i> nameshop@gmail.com
+                            </a>
+                        </li>
+                        <li class="my-2 pt-2">
+                            <a href="#" class=" text-white">
+                                <i class="bi bi-geo-fill"></i> Jakarta, Indonesia - 42323
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">quick links</h6>
+                    <hr class="bg-white mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px;">
+                    <ul class="list-unstyled">
+                        <li class="my-2">
+                            <a href="#" class=" text-white">
+                                <i class="bi bi-arrow-right"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="my-2 pt-2">
+                            <a href="#" class=" text-white">
+                                <i class="bi bi-arrow-right"></i> About
+                            </a>
+                        </li>
+                        <li class="my-2 pt-2">
+                            <a href="#" class=" text-white">
+                                <i class="bi bi-arrow-right"></i> Shop
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-white text-center py-3">
+            <p>
+                &copy; Copyright
+                <a href="#" class="link text-white">makrha.com</a>
+                <p>Create Designed By Muhammad Akbar Nugraha</p>
+            </p>
+        </div>
+    </footer>
+    <!-- Section End Footer -->
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="js/script.js"></script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
